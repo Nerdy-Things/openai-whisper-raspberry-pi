@@ -1,0 +1,15 @@
+[Unit]
+Description=Continuously record the input from your microphone
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/__USER__/raspberry-pi-audio-spy/python/daemon_audio.py
+WorkingDirectory=/home/__USER__/raspberry-pi-audio-spy/python/
+StandardOutput=file:/home/__USER__/raspberry-pi-audio-spy/system/logs/daemon_audio.log
+StandardError=file:/home/__USER__/raspberry-pi-audio-spy/system/logs/daemon_audio.log
+Restart=always
+User=__USER__
+RemainAfterExit=True
+
+[Install]
+WantedBy=multi-user.target
