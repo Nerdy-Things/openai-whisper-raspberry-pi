@@ -10,6 +10,6 @@ pip install pyaudio --break-system-packages
 pip install pydub --break-system-packages
 
 
-chmod +x ./create_daemon_files.sh
-sudo ./create_daemon_files.sh
+# chmod +x ./create_daemon_files.sh
+# sudo ./create_daemon_files.sh
 
