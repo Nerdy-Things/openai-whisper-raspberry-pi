@@ -3,7 +3,7 @@ Description=Run transcoding queue
 After=multi-user.target
 
 [Service]
-ExecStart=/usr/bin/python3 /home/__USER__/raspberry-pi-audio-spy/python/daemon_ai.py
+ExecStart=/usr/bin/python3 /home/__USER__/raspberry-pi-audio-spy/python/daemon_ai.py 0
 WorkingDirectory=/home/__USER__/raspberry-pi-audio-spy/python/
 StandardOutput=file:/home/__USER__/raspberry-pi-audio-spy/system/logs/daemon_ai.log
 StandardError=file:/home/__USER__/raspberry-pi-audio-spy/system/logs/daemon_ai.log

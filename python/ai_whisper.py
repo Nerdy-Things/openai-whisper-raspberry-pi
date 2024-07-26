@@ -6,10 +6,13 @@ class AiWhisper:
     _models = ["tiny.en", "base.en", "small.en", "medium.en"]
 
     _model = None
-    
-    def __init__(self):
+
+    def __init__(self, model_index: int = 0):
         TimeUtil.start("AiWhisper init")
-        self._model = whisper.load_model(self._models[0])
+        if len(self._models) < model_index:
+            raise KeyError(f"Max model index is {len(self._models)}")
+        print(f"AiWhisper init. Using {self._models[model_index]}")
+        self._model = whisper.load_model(self._models[model_index])
         TimeUtil.end("AiWhisper init")
 
     def transcode(self, file_path: str):

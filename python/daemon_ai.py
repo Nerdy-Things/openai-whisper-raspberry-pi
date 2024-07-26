@@ -5,13 +5,19 @@ from audio_converter import Converter
 from time_util import TimeUtil
 from log_util import LogUtil
 import time
+import sys
 
 delay = 5
 
 def main():
     LogUtil.writeln(f"Starting transcode...")
+    model_index = 0
+
+    if len(sys.argv) >= 1:
+        model_index = int(sys.argv[1])
+
     database = AudioDatabase()
-    ai = AiWhisper()
+    ai = AiWhisper(model_index)
     converter = Converter()
     iteration = 0
     while True:
