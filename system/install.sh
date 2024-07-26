@@ -2,7 +2,7 @@
 
 sudo apt update
 sudo apt-get install ffmpeg sqlite3
-sudo apt install -y portaudio19-dev python3-pyaudio
+sudo apt-get install -y portaudio19-dev python3-pyaudio
 
 # https://github.com/openai/whisper
 pip install numpy==1.26.4 --break-system-packages
