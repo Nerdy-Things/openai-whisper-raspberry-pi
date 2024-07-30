@@ -1,5 +1,8 @@
 # Audio transcription with OpenAI Whisper on Raspberry PI 5
 
+## Video Description
+[![Watch the video](/thumbnail_1280_720.jpg)](https://www.youtube.com/watch?v=pH07mng2jBU)
+
 ## System folder
 
 The system folder has the script `install.sh` that will install all required software for the test.
